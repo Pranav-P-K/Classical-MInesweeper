@@ -111,9 +111,9 @@ if __name__ == '__main__':
     '''name = etv.get()
     con = msq.connect(host='localhost',user='root',passwd='Pranavpk6')#123
     cur = con.cursor()
-    #cmd0 = cur.execute('CREATE DATABASE Minesweeper')
+    cmd0 = cur.execute('CREATE DATABASE IF NOT EXISTS Minesweeper')
     cmd1 = cur.execute('USE Minesweeper')
-    #cmd2 = cur.execute('CREATE TABLE MineData(Player_Name VARCHAR(30),Score INT,Result CHAR(4))')
+    cmd2 = cur.execute('CREATE TABLE IF NOT EXISTS MineData(Player_Name VARCHAR(30),Score INT,Result CHAR(4))')
     cmd3 = 'INSERT INTO MineData VALUES(%s,%s,%s)'
     cmd4 = (name,str(score),res)
     cmd5 = cur.execute(cmd3,cmd4)
