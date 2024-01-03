@@ -1,7 +1,7 @@
 from tkinter import *
 from random import *
 from tkinter import messagebox
-#import mysql.connector as msq
+import mysql.connector as msq
 
 def main_window():
     global ms,ne,etv
@@ -108,7 +108,7 @@ def msg():
 if __name__ == '__main__':
     main_window()
     ms.mainloop()
-    '''name = etv.get()
+    name = etv.get()
     con = msq.connect(host='localhost',user='root',passwd='Pranavpk6')#123
     cur = con.cursor()
     cmd0 = cur.execute('CREATE DATABASE IF NOT EXISTS Minesweeper')
@@ -118,4 +118,4 @@ if __name__ == '__main__':
     cmd4 = (name,str(score),res)
     cmd5 = cur.execute(cmd3,cmd4)
     con.commit()
-    con.close()'''   
+    con.close()
